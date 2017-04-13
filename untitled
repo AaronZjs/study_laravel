@@ -1,0 +1,73 @@
+创建这个数据库
+test_news_system
+
+mb4编码可存储微信表情，一般来说utf8就够了，
+
+
+再看一下数据库的表结构
+就是博客，这样一个简单的东西，多渗透一点知识点
+
+
+文章表 articles
+
+id
+title
+text
+created_at
+updated_at
+
+分类表 cates
+
+id
+cate_name
+created_at
+updated_at
+
+
+管理员表（用来登录后台）
+
+php artisan migrate
+
+
+
+
+因为我这边有好几个php环境
+目前用的是php 5.6
+没有这个pdo
+
+切换一下php版本
+
+
+laravel 自带俩表，我们就用user表
+
+迁移这部分可以参考文档
+
+
+
+我们这边使用了redis记录浏览次数pv
+用redis的原子性操作加1避免并发数据不正确
+
+
+
+我们需要什么laravel插件或者php插件可以来这里找
+我这边也有提交两个封装的插件
+
+
+后边会讲一下怎么发布自己的包，非常简单，很多事只要动手就OK
+
+
+
+这就是著名的predis
+
+
+还在上班，就先这样，周末再弄23
+
+
+
+
+
+
+
+
+
+app_key  php artisan key:generate
